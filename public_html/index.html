@@ -11,6 +11,104 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+
+
+        <div>Dice poker game</div>
+
+
+        <p id="playerHand1"></p>
+
+       
+                <button type="button"
+                onclick="rollD1()">Roll d1</button>
+            
+
+
+        <p id="playerHand2" ></p>
+
+        <button type="button"
+        onclick="rollDie('playerHand2')">Roll d2</button>
+
+
+        <p id="playerHand3" ></p>
+
+        <button type="button"
+        onclick="rollDie('playerHand3')">Roll d3</button>
+
+        <p id="playerHand4" ></p>
+
+        <button type="button"
+        onclick="rollDie('playerHand4')">Roll d4</button>
+
+        <p id="playerHand5" ></p>
+
+        <button type="button"
+        onclick="rollDie('playerHand5')">Roll d5</button>
+
+<p></p>
+        
+<button type="button"
+onclick="rollAllDice()">Roll all</button>
+
+<script>
+var playerDice1 = 1;
+var playerDice2 = 2;
+var playerDice3 = 3;
+var playerDice4 = 4;
+var playerDice5 = 5;
+
+var centerDice1 = 1;
+var centerDice2 = 2;
+
+var OpponentDice1 = 1;
+var OpponentDice2 = 2;
+var OpponentDice3 = 3;
+var OpponentDice4 = 4;
+var OpponentDice5 = 5;
+
+
+document.getElementById("playerHand1").innerHTML =playerDice1;
+document.getElementById("playerHand2").innerHTML =playerDice2;
+document.getElementById("playerHand3").innerHTML =playerDice3;
+document.getElementById("playerHand4").innerHTML =playerDice4;
+document.getElementById("playerHand5").innerHTML =playerDice5;
+</script>
+
+
+
+
+<script>
+function diceRoll() 
+{
+   return  Math.floor((Math.random() * 6) + 1); 
+}
+
+function rollAllDice()
+{
+document.getElementById('playerHand1').innerHTML = diceRoll(); 
+document.getElementById('playerHand2').innerHTML = diceRoll(); 
+document.getElementById('playerHand3').innerHTML = diceRoll(); 
+document.getElementById('playerHand4').innerHTML = diceRoll(); 
+document.getElementById('playerHand5').innerHTML = diceRoll(); 
+}
+
+function rollDie(dice)
+{
+    document.getElementById(dice).innerHTML = diceRoll(); 
+
+}
+
+function rollD1()
+{
+    document.getElementById('playerHand1').innerHTML = diceRoll(); 
+
+}
+
+</script>
+
+
+
+
+
     </body>
 </html>
