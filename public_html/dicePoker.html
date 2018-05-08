@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+
+    <div>Dice poker game</div>
+
+    <script>
+
+        function updateDiceUI() {
+            document.getElementById("playerHand1").innerHTML = playerDice1;
+            document.getElementById("playerHand2").innerHTML = playerDice2;
+            document.getElementById("playerHand3").innerHTML = playerDice3;
+            document.getElementById("playerHand4").innerHTML = playerDice4;
+            document.getElementById("playerHand5").innerHTML = playerDice5;
+
+        }</script>
+
+    <p id="playerHand1"></p>
+
+
+    <button type="button" onclick="rollD1()">Roll d1</button>
+
+
+
+    <p id="playerHand2"></p>
+
+    <button type="button" onclick="rollDie('playerHand2')">Roll d2</button>
+
+
+    <p id="playerHand3"></p>
+
+    <button type="button" onclick="rollDie('playerHand3')">Roll d3</button>
+
+    <p id="playerHand4"></p>
+
+    <button type="button" onclick="rollDie('playerHand4')">Roll d4</button>
+
+    <p id="playerHand5"></p>
+
+    <button type="button" onclick="rollDie('playerHand5')">Roll d5</button>
+
+    <p></p>
+
+    <button type="button" onclick="rollAllDice()">Roll all</button>
+
+    <script>
+        var playerDice1 = 0;
+        var playerDice2 = 0;
+        var playerDice3 = 0;
+        var playerDice4 = 0;
+        var playerDice5 = 0;
+
+        var centerDice1 = 0;
+        var centerDice2 = 0;
+
+        var OpponentDice1 = 0;
+        var OpponentDice2 = 0;
+        var OpponentDice3 = 0;
+        var OpponentDice4 = 0;
+        var OpponentDice5 = 0;
+
+        var playerHand = ["playerHand1", "playerHand2", "playerHand3", "playerHand4", "playerHand5"];
+
+
+        updateDiceUI();
+
+    </script>
+
+
+
+
+    <script>
+        function diceRoll() {
+            return Math.floor((Math.random() * 6) + 1);
+        }
+
+        function rollAllDice() {
+            //      document.getElementById('playerHand1').innerHTML = diceRoll();
+            playerDice1 = diceRoll();
+            document.getElementById("playerHand1").innerHTML = playerDice1;
+
+            document.getElementById('playerHand2').innerHTML = diceRoll();
+            document.getElementById('playerHand3').innerHTML = diceRoll();
+            document.getElementById('playerHand4').innerHTML = diceRoll();
+            document.getElementById('playerHand5').innerHTML = diceRoll();
+        }
+
+
+
+
+        function rollAllDie2() {
+            for (x in playerHand) {
+                document.getElementById(x).innerHTML = diceRoll();;
+            }
+        }
+
+
+        function rollDie(dice) {
+            document.getElementById(dice).innerHTML = diceRoll();
+
+        }
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
