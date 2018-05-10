@@ -10,6 +10,17 @@ and open the template in the editor.
     <title>TODO supply a title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -20,54 +31,128 @@ and open the template in the editor.
     <div>Dice poker game</div>
 
 
+    <div class="row">
+        <div class="col-sm-2" style="background-color:red;">
 
-    <p id="playerHand1"></p>
+            <p id="playerHand1"></p>
 
-    <button type="button" onclick="rollDie(1)">Roll d1</button>
-
-
-    <p id="playerHand2"></p>
-
-    <button type="button" onclick="rollDie(2)">Roll d2</button>
+            <button type="button" onclick="rollDie(1)">Roll d1</button>
 
 
-    <p id="playerHand3"></p>
-
-    <button type="button" onclick="rollDie(3)">Roll d3</button>
-
-    <p id="playerHand4"></p>
-
-    <button type="button" onclick="rollDie(4)">Roll d4</button>
-
-    <p id="playerHand5"></p>
-
-    <button type="button" onclick="rollDie(5)">Roll d5</button>
-
-    <p></p>
-
-    <button type="button" onclick="rollAllDice()">Roll all</button>
+        </div>
+        <div class="col-sm-2" style="background-color:lightgray;">
 
 
-    <p id="centerHand1">x</p>
+            <p id="playerHand2"></p>
+
+            <button type="button" onclick="rollDie(2)">Roll d2</button>
+
+
+        </div>
+
+        <div class="col-sm-2" style="background-color:green;">
+
+            <p id="playerHand3"></p>
+
+            <button type="button" onclick="rollDie(3)">Roll d3</button>
+
+        </div>
+        <div class="col-sm-2" style="background-color:yellow;">
+
+            <p id="playerHand4"></p>
+
+            <button type="button" onclick="rollDie(4)">Roll d4</button>
+
+
+        </div>
+
+
+        <div class="col-sm-2" style="background-color:brown;">
+
+            <p id="playerHand5"></p>
+
+            <button type="button" onclick="rollDie(5)">Roll d5</button>
+
+        </div>
+    </div>
 
 
 
-    <p id="centerHand2">x</p>
+    <div class="row">
+        <div class="col-sm-2" style="background-color:paleturquoise;">
 
-    <p id="opponentHand1">y</p>
-
-    <p id="opponentHand2">y</p>
-
-    <p id="opponentHand3">y</p>
-
-    <p id="opponentHand4">y</p>
-
-    <p id="opponentHand5">y</p>
+            <button type="button" onclick="rollAllDice()">Roll all</button>
 
 
+        </div>
+    </div>
+
+
+
+    <div class="row">
+
+        <div class="col-sm-2" style="background-color:pink;">
+            <p id="centerHand1"></p>
+        </div>
+
+        <div class="col-sm-2" style="background-color:olivedrab;">
+            <p id="centerHand2"></p>
+        </div>
+
+
+
+        <div class="col-sm-2" style="background-color:black;">
+                <button type="button" onclick="">PLAY</button>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+            <div class="col-sm-2" style="background-color:red;">
+    
+                <p id="opponentHand1"></p>
+    
+                
+    
+    
+            </div>
+            <div class="col-sm-2" style="background-color:lightgray;">
+    
+    
+                <p id="opponentHand2">y</p>
+    
+    
+    
+            </div>
+    
+            <div class="col-sm-2" style="background-color:green;">
+    
+                <p id="opponentHand3">y</p>
+    
+    
+            </div>
+            <div class="col-sm-2" style="background-color:yellow;">
+    
+                <p id="opponentHand4">y</p>
+    
+    
+    
+            </div>
+    
+    
+            <div class="col-sm-2" style="background-color:brown;">
+    
+                <p id="opponentHand5">y</p>
+    
+    
+            </div>
+        </div>
 
     <script>
-          updateDiceUI();
+
+        updateAllDie();
+        
     </script>
 
 
